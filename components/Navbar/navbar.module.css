@@ -1,0 +1,40 @@
+.app {
+    flex-grow: 1;
+
+  }
+  
+  .toolbar {
+    background-color: rgb(49, 49, 49);
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+      rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+    height: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .menu-icon {
+    padding: 8px;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .title {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .login {
+    padding: 8px 16px;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
