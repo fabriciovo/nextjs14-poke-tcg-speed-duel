@@ -1,8 +1,12 @@
 import { IEntity } from "@/interfaces/entities";
 import styles from "./styles.module.css";
-import { TCard } from "@/types/globals";
+import { TCard, TPokemonCard } from "@/types/globals";
 
-const PokemonCardComponent = (card: TCard) => {
+type PokemonCardProps = {
+  card: TCard;
+};
+
+const HandCard = (card: PokemonCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.stat}>HP: 60</div>
@@ -25,4 +29,4 @@ const PokemonCardComponent = (card: TCard) => {
   );
 };
 
-export default PokemonCardComponent;
+export default HandCard;

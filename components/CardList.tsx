@@ -29,7 +29,8 @@ const CardList = () => {
         <>
           {pokemons.map((pokemon: any) => (
             <Image
-              style={{margin: 4}}
+              key={pokemon.id}
+              style={{ margin: 4 }}
               src={pokemon.images.large}
               width={340}
               height={340}

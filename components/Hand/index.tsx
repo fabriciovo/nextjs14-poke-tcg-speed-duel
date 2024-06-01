@@ -1,41 +1,37 @@
 import { IEntity } from "@/interfaces/entities";
 import styles from "./hand.module.css";
-import { TCard } from "@/types/globals";
-import { useState } from "react";
+import { TCard, TPokemonCard } from "@/types/globals";
+import { Fragment, useEffect, useState } from "react";
+import HandCard from "../Cards/HandCard";
 
 type HandProp = Pick<IEntity, "hand">;
 
 const HandComponent = ({ hand }: HandProp) => {
-  const [hoverCard, setHoverCard] = useState<TCard>();
-
+  const [hoverCard, setHoverCard] = useState<TCard | TPokemonCard | null>(null);
 
   return (
-    <div className={styles.handContainer}>
-      {hand.map((card, index) => (
+    <>
+      {/* {hoverCard ? (
         <div
-          key={index}
-          className={styles.card}
-          onMouseEnter={() => setHoverCard(card)}
+          style={{
+            position: "absolute",
+            zIndex: 1000,
+            top: "50%",
+            left: 0,
+            right: 0,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
         >
-          <div className={styles.stat}>HP: 60</div>
-
-          <div
-            className={styles.image}
-            style={{
-              backgroundImage: `url("https://pbs.twimg.com/media/ERPDVqzWAAUwLRl.png")`,
-            }}
-          ></div>
-          <div className={styles.name}>Pikachu</div>
-          <div className={styles.type}>Electric</div>
-          {/* <div className={styles.description}>
-            An electric-type Pokémon known for its lightning-fast speed.
-          </div> */}
-          <div className={styles.stats}>
-            <div className={styles.stat}>Attack: name</div>
-          </div>
+          {hoverCard.type === "pokemon" ? <></> : null}
         </div>
-      ))}
-    </div>
+      ) : null} */}
+      <div className={styles.handContainer}>
+        {hand.map((card, index) => (
+          <Fragment key={card.id}>{card.type === "pokemon" ? <></> : null}</Fragment>
+        ))}
+      </div>
+    </>
   );
 };
 

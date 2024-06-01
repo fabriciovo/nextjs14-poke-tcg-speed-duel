@@ -4,6 +4,7 @@ export const STATIC_PLAYER: IEntity = {
   hand: [
     {
       name: "string",
+      type: "pokemon",
       attack1: "string",
       attack2: "string",
       special: "string",
@@ -14,15 +15,19 @@ export const STATIC_PLAYER: IEntity = {
     },
     {
       name: "string",
+      type: "pokemon",
     },
     {
       name: "string",
+      type: "pokemon",
     },
     {
       name: "string",
+      type: "pokemon",
     },
     {
       name: "string",
+      type: "pokemon",
     },
   ],
   banned: [],
@@ -38,41 +43,16 @@ export const STATIC_PLAYER: IEntity = {
     maxLife: "string",
     life: "string",
     energy: 0,
+    type: "pokemon",
   },
   isPlayer: true,
 };
 
 export const STATIC_ENEMY: IEntity = {
-    hand: [
-      {
-        name: "string",
-        attack1: "string",
-        attack2: "string",
-        special: "string",
-        weak: "string",
-        maxLife: "string",
-        life: "string",
-        energy: 0,
-      },
-      {
-        name: "string",
-      },
-      {
-        name: "string",
-      },
-      {
-        name: "string",
-      },
-      {
-        name: "string",
-      },
-    ],
-    banned: [],
-    graveyard: [],
-    bank: [],
-    deck: [],
-    pokemon: {
+  hand: [
+    {
       name: "string",
+      type: "pokemon",
       attack1: "string",
       attack2: "string",
       special: "string",
@@ -81,6 +61,37 @@ export const STATIC_ENEMY: IEntity = {
       life: "string",
       energy: 0,
     },
-    isPlayer: false,
-  };
-  
+    {
+      name: "string",
+      type: "pokemon",
+    },
+    {
+      name: "string",
+      type: "pokemon",
+    },
+    {
+      name: "string",
+      type: "pokemon",
+    },
+    {
+      name: "string",
+      type: "pokemon",
+    },
+  ],
+  banned: [],
+  graveyard: [],
+  bank: [],
+  deck: [],
+  pokemon: {
+    name: "string",
+    type: "pokemon",
+    attack1: "string",
+    attack2: "string",
+    special: "string",
+    weak: "string",
+    maxLife: "string",
+    life: "string",
+    energy: 0,
+  },
+  isPlayer: false,
+};

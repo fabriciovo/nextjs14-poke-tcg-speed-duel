@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", paddingTop: 90 }}
       >
         <CardList />
       </div>
