@@ -1,4 +1,5 @@
 export type TCard = {
+  id: string;
   name: string;
   type: string;
 };
@@ -8,7 +9,7 @@ export type TPokemonCard = {
   attack2: string;
   special: string;
   weak: string;
-  maxLife: string;
+  maxLife: number;
   life: string;
   energy: number;
 } & TCard;
