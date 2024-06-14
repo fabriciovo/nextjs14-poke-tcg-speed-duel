@@ -23,14 +23,18 @@ export default function Home() {
             <DeckComponent deck={rival.deck} />
             <GraveyardComponent graveyard={rival.graveyard} />
           </div>
-          <MainPokemonComponent pokemon={rival.pokemon} />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <MainPokemonComponent pokemon={rival.pokemon} />
+          </div>
         </div>
       ) : null}
 
       {player ? (
         <div className={styles.container}>
           <Actions />
-          <MainPokemonComponent pokemon={player.pokemon} />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <MainPokemonComponent pokemon={player.pokemon} />
+          </div>
           <HandComponent hand={player.hand} />
           <DeckComponent deck={player.deck} />
           <GraveyardComponent graveyard={player.graveyard} />
