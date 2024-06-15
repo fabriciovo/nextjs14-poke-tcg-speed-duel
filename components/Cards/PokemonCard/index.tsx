@@ -1,3 +1,4 @@
+import { useAppContext } from "@/context";
 import styles from "./styles.module.css";
 import { TPokemonCard } from "@/types/globals";
 
@@ -5,9 +6,10 @@ type PokemonCardProps = {
   card: TPokemonCard;
 };
 
-const PokemonCardComponent = ({card}: PokemonCardProps) => {
+const PokemonCardComponent = ({ card }: PokemonCardProps) => {
+  const { setCard } = useAppContext();
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={() => setCard({ ...card })}>
       <div className={styles.stat}>HP: 60</div>
 
       <div

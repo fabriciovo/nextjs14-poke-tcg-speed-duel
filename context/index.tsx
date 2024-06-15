@@ -1,15 +1,18 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 
-const AppContext = createContext<any>(undefined);
+const AppContext = createContext<any>({
+  card:{}
+});
 
 export function AppWrapper({ children }: { children: React.ReactNode }) {
-  const [pokemon, setPokemon] = useState<any>(undefined);
+  const [card, setCard] = useState<any>(undefined);
 
   return (
     <AppContext.Provider
       value={{
-        setPokemon,
+        card,
+        setCard,
       }}
     >
       <>{children}</>
