@@ -31,7 +31,7 @@ export default function Home() {
 
       {player ? (
         <div className={styles.container}>
-          <Actions />
+          {turn ? <Actions /> : null}
           <div style={{ display: "flex", justifyContent: "center" }}>
             <MainPokemonComponent pokemon={player.pokemon} />
           </div>
